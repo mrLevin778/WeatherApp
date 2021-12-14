@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Погодное приложение</title>
+    <title>О нас</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
   </head>
   <body>
@@ -14,38 +14,9 @@
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
         <a class="me-3 py-2 text-dark text-decoration-none" href="/">Главная</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="about">Инфо</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="#">Инфо</a>
       </nav>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-5 offset-1">
-          <h1>Погода в вашем городе</h1><br>
-          <form action="" method="post">
-            {% csrf_token %}
-            <label for="city">Город</label>
-            {{ form.name }}
-            <br>
-            <input type="submit" name="send" value="Узнать" class="btn btn-danger">
-          </form>
-        </div>
-        <div class="col-4 offset-1">
-          <h1>Информация</h1>
-
-          {% for info in all_info %}
-
-          <div class="alert alert-info">
-            <div class="row">
-              <div class="col-9">
-            <b>Город:</b> {{ info.city }}<br>
-            <b>Температура:</b> {{ info.temp }}<sup>o</sup>
-          </div>
-          <div class="col-2 offset-1">
-            <img src="http://openweathermap.org/img/w/{{ info.icon }}.png" alt="Фото погоды" class="img-thumbnail">
-            </div>
-        </div>
-      </div>
-
-      {% endfor %}
-  </body>
+    <h1>Страница О нас</h1><br>
+    </body>
 </html>
